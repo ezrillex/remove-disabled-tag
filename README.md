@@ -5,4 +5,4 @@
  
 
  Icon attribution:
- <a href="https://www.flaticon.com/free-icons/delete" title="delete icons">Delete icons created by Bharat Icons - Flaticon</a>
+ <a href="https://www.flaticon.com/free-icon/eraser_7180338">Delete icons created by Bharat Icons - Flaticon</a>
