@@ -1,0 +1,26 @@
+{
+
+    "manifest_version": 3,
+    "name": "Remove-Disabled-Tag",
+    "version": "0.1.3",
+  
+    "description": "Removes the 'disabled' HTML attribute of a selected element.",
+  
+    "icons": {
+      "48": "eraser.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["remove-disable.js"]
+      }
+    ],
+
+    "background":{
+        "service_worker":"remove-disable-background.js"
+    },
+
+    "permissions":["contextMenus", "activeTab"]
+  }
+  
