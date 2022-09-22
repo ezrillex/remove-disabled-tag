@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "Remove-Disabled-Tag",
-    "version": "0.1.2",
+    "version": "0.1.3",
   
     "description": "Removes the 'disabled' HTML attribute of a selected element.",
   

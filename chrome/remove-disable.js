@@ -1,7 +1,5 @@
 var remove_disabled_last_target_element = null;
 
-
-
 // listens and logs the target element of the context menu (firefox has targetElementId)
 document.addEventListener("contextmenu", function (event) {
     remove_disabled_last_target_element = event.target;
@@ -18,12 +16,7 @@ chrome.runtime.onMessage.addListener(
 );
 
 function RemoveDisable(node) {
-    // i think in pega starting from parent is not that bad of an idea, 
-    // TODO figure out the specific scenario this failed on radio button.
-    // remove from parent, but not start recursion from there, could be root element
- 
-
-    // find and remove attribute in children
+    // start from parent because for some radio buttons the radio is a sibling
     recursiveRemoveDisable(node.parentNode);
 }
 

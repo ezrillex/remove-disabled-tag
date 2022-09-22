@@ -1,15 +1,7 @@
-// context menu icon attribution
-console.log("Ui icons created by Bharat Icons - Flaticon");
-
 function RemoveDisable(tid){ 
     let node = browser.menus.getTargetElement(tid); // Target ID
 
-    // remove from parent, but not start recursion from there, could be root element
-    //if(node.parentNode.hasAttribute("disabled")){
-    //    node.parentNode.removeAttribute("disabled")
-    //}
-
-    // find and remove attribute in children
+    // start from parent because for some radio buttons the radio is a sibling
     recursiveRemoveDisable(node.parentNode);
 }
 
