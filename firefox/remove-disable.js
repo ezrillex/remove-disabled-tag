@@ -5,12 +5,12 @@ function RemoveDisable(tid){
     let node = browser.menus.getTargetElement(tid); // Target ID
 
     // remove from parent, but not start recursion from there, could be root element
-    if(node.parentNode.hasAttribute("disabled")){
-        node.parentNode.removeAttribute("disabled")
-    }
+    //if(node.parentNode.hasAttribute("disabled")){
+    //    node.parentNode.removeAttribute("disabled")
+    //}
 
     // find and remove attribute in children
-    recursiveRemoveDisable(node);
+    recursiveRemoveDisable(node.parentNode);
 }
 
 function recursiveRemoveDisable(node){

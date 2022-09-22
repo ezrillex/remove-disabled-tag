@@ -21,12 +21,10 @@ function RemoveDisable(node) {
     // i think in pega starting from parent is not that bad of an idea, 
     // TODO figure out the specific scenario this failed on radio button.
     // remove from parent, but not start recursion from there, could be root element
-    if (node.parentNode.hasAttribute("disabled")) {
-        node.parentNode.removeAttribute("disabled")
-    }
+ 
 
     // find and remove attribute in children
-    recursiveRemoveDisable(node);
+    recursiveRemoveDisable(node.parentNode);
 }
 
 function recursiveRemoveDisable(node) {
